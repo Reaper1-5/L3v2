@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="icon" href="Images/favicon.ico">
+    <title>Login</title>
+
+    <!-- Connect google API for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- External Stylesheets -->
+    <link href="../css/login.css" rel="stylesheet" type="text/css">
+
+    <!-- External fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet"></script>
+</head>
+<body>
+    <div>
+      <div class="nav-container">
+        <nav class="navbar">
+          <ul class="nav-links">
+            <li class="nav-link">
+              <a href="../index.html">Home</a>
+            </li>
+            <li class="nav-link services">
+              <a href="#">Maths
+                <span class="material-icons dropdown-icon">
+                  arrow_drop_down
+                </span>
+              </a>
+              <ul class="drop-down">
+                <li><a href="../html/arithmetic.html">Arithmetic</a></li>
+                <li><a href="../html/algebra.html">Algebra</a></li>
+                <li><a href="../html/calculus.html">Calculus</a></li>
+              </ul>
+            </li>
+            <li class="nav-link">
+              <a href="../html/login.html">Login</a>
+            </li>
+            <li class="nav-link">
+              <a href="../index.html">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+        <div class="vertical-banner">
+            <form>
+              <label for="username">
+                Username: 
+              </label>
+              <input type="text" placeholder="Enter your username" id="username">
+              
+              <label for="password">
+                Password:
+              </label>
+              <input type="text" placeholder="Enter your password" id="password" password>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
