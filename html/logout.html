@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
 
     <link rel="icon" href="../images/favicon.ico">
-    <title>Formulae</title>
+    <title>Logout</title>
 
     <!-- Connect google API for fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,14 +13,12 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- External Stylesheets -->
-    <link href="../css/formulae.css" rel="stylesheet" type="text/css">
+    <link href="../css/login.css" rel="stylesheet" type="text/css">
 
     <!-- External fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
-    <!-- External Files -->
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
+    <script defer src="../js/logout.js"></script>
     <script defer src="../js/updateNav.js"></script>
 </head>
 <body>
@@ -46,21 +44,16 @@
           <a href="../html/login.html" id="login-text">Login</a>
         </li>
         <li class="nav-link">
-          <a href="../html/about.html">About</a>
+          <a href="../index.html">About</a>
         </li>
       </ul>
     </nav>
   </div>
 
-  <div class="vertical-banner">
-    <h2>Basic Arithmetic</h2>
-    <p>Multiplication with letters : \(a\times b = ab \)</p><br>
-    <p>Division with letters :  \(a / b = \frac{a}{b}\)</p><br>
-    <h2>Powers</h2><br>
-    <p>When multiplying, if the bases are the same we add the powers : \( a^5\times a^2 = a^{5+2} = a^7 \)</p><br>
-    <p>When dividing, if the bases are the same we subtract the powers : \( \frac{a^5}{a^2} = a^{5-2} = a^3 \)</p><br>
-    <p>When there is a power inside and outside of the brackets, we multiply the powers : \( (a^5)^3 = a^{3\times5} = a^{15}\)</p><br>
-    <p>When there is a power outside of the brackets, we distribute the power to all numbers/variables : \( (ab)^8 = a^{8}b^{8} \)</p><br>
-  </div>
+    <div class="vertical-banner">
+        <form id="logout-form"> 
+          <button id="logout-button">LOGOUT</button>
+        </form>
+    </div>
 </body>
 </html>
