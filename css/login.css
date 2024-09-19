@@ -218,3 +218,18 @@ a {
 #login-form #form-submit:hover {
   background-color: var(--secondary-accent);
 }
+
+@media only screen and (max-width: 425px) {
+  .vertical-banner {
+    top: 0;
+    left: 0;
+    border: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    padding-top: 200px;
+  }
+  .nav-container {
+    z-index: 10;
+  }
+}
