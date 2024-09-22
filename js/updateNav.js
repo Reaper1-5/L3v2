@@ -5,28 +5,23 @@
 // Get the navigation button element
 const navLoginText = document.querySelectorAll("#login-text")[0];
 
-// Get any user information if it's available
-const user = [
-  localStorage.getItem("username"),
-  localStorage.getItem("password")
-]
+// Get username if it's available
+let username = localStorage.getItem("username");
+let password = localStorage.getItem("password");
 
 // Initiate a checker boolean
 let isUserLoggedIn = false;
 
-if(user != null)
-{
-  if(user[0] != "" && user[1] != "") isUserLoggedIn = true;
-  else isUserLoggedIn = false;
+if(username == "" || username == null || password == "" || password == null) isUserLoggedIn = false;
+else isUserLoggedIn = true;
 
-  // If they are logged in, make it so they cannot login again. If not make sure that they can only login and not logout
-  if(isUserLoggedIn == true) {
-      navLoginText.innerText = "Logout";
-      navLoginText.setAttribute("href", "../html/logout.html");
-  }
-  else
-  {
-      navLoginText.innerText = "Login";
-      navLoginText.setAttribute("href", "../html/login.html");
-  }
+// If they are logged in, make it so they cannot login again. If not make sure that they can only login and not logout
+if(isUserLoggedIn == true) {
+    navLoginText.innerText = "Logout";
+    navLoginText.setAttribute("href", "../html/logout.html");
+}
+else
+{
+    navLoginText.innerText = "Login";
+    navLoginText.setAttribute("href", "../html/login.html");
 }
