@@ -156,9 +156,15 @@ span {
 .vertical-banner h1 {
   width: 100%;
   text-align: center;
+  font: var(--heavy-font);
 }
 
-@media only screen and (max-width: 750px) {
+*:not(p), *:not(h1), *:not(nav) {
+  font-size: 20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width: 750px) {
   .vertical-banner {
     top: 0;
     left: 0;
@@ -172,9 +178,7 @@ span {
   .nav-container {
     z-index: 10;
   }
-}
 
-@media screen and (max-width: 750px) {
   .mobile-icon {
     display: block;
   }
