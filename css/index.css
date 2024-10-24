@@ -1,12 +1,15 @@
 :root {
   --accent: rgb(100, 0 ,0);
   --secondary-accent: rgb(150, 0, 0);
+  --transparent-background: rgba(0,0,0,0.5);
+  --light-font: 400 20px/30px "nexaextra_light", sans-serif;
+  --heavy-font: 400 20px/30px "akira_expandedsuper_bold", sans-serif;
 }
 
 .material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Material Icons' !important;
+  font-weight: normal !important;
+  font-style: normal !important;
   font-size: 12px;  /* Preferred icon size */
   display: inline-block;
   line-height: 1;
@@ -31,7 +34,7 @@
 * {
   margin: 0;
   padding: 0;
-  font: 400 12px/30px "PT Mono", monospace !important;
+  font: var(--light-font);
 }
 
 body {
@@ -46,102 +49,87 @@ body {
   margin: 0;
 }
 
+body > div {
+  width: 100%;
+  height: 100%;
+}
+
 /* NAVIGATION */
 
-.nav-container {
-  position: absolute;
-  display: flex;
-  font-size: 14px;
-  height: 80px;
-  top: 0;
+.nav-bar {
+	width: 50%;
+	position: fixed;
+	height:auto;
+	z-index: 999;
+	top: 0;
   left: 50%;
   transform: translateX(-50%);
+	font-size: 18px;
+  background-color: var(--transparent-background);
+  border: 3px solid var(--accent);
+  margin-top: 12px;
+  border-radius: 8px;
 }
 
-.navbar {
-  margin: auto;
-  padding: 0.5rem 1.5rem;
-  background: #000;
-  border-radius: 1rem;
-  border: 4px solid var(--accent);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.nav-bar a {
+	text-decoration: none;
+	color: inherit;
+  width: 80px !important;
+  height: 55px !important;
+  transition: all 0.2s;
+  font-weight: initial;
 }
 
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  color: white;
+.mobile-navigation ul {
+	overflow: hidden;
+	text-align:center;
+	padding: 1%;
+	margin-left: 0;
+  -webkit-transition: max-height 0.4s;
+	-ms-transition: max-height 0.4s;
+	-moz-transition: max-height 0.4s;
+	transition: max-height 0.4s;
 }
 
-.nav-link, .drop-down li {
-  list-style: none;
-  height: 100%;
-  padding: 0.5rem 1rem;
-  font-weight: 600;
-  cursor: pointer;
+.mobile-navigation ul li {
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: 800 !important;
+	padding: 10px 15px;
+	color: white;
+  background-color: initial;
+  transition: all 0.15s;
 }
 
-a {
-  text-decoration: none;
-  color: currentColor;
-  font-size: 20px;
+.mobile-navigation ul li:hover {
+  background-color: var(--secondary-accent);
 }
 
-.drop-down {
-  position: absolute;
-  padding: 4px 4px 4px 4px;
-  margin: 0.5rem -0.5rem;
-  background: black;
-  color: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
-  font-size: 12px;
-  display: none;
-  border: 2px solid var(--secondary-accent);
-  z-index: 99;
-  animation: dropdown 2s ease-in-out 1 backwards;
+/* Mobile navigation */
+.mobile-icon {
+	width: 100%;
+	text-align: right;
+	box-sizing: border-box;
+	cursor: pointer;
+	color: green;
+	display: none;
+	font-size: 20px;
+	font-family: bold;
+	margin: 2% 2%;
+	position: relative;
+	padding-left: 1.25em;
 }
-
-.nav-link:hover {
-  background-color: var(--accent);
-  border-radius: 0.5rem;
-}
-
-.services:hover .drop-down {
-  display: block;
-  animation: dropdown 2s ease-in-out 1 forwards;
-}
-
-.services a {
-  display: flex;
-  align-items: center;
-  width:100%;
-  height:100%;
-}
-
-.services .dropdown-icon {
-  font-size: 18px;
-  position: relative;
-  right: -5px;
-  transform: rotate(0deg);
-  transition: 0.3s ease-in-out all;
-}
-
-.services:hover .dropdown-icon {
-  transform: rotate(180deg);
-}
-
-.drop-down li {
-  background: #333;
-  color: #fff;
-  border-radius: 0.5rem;
-  font-size: 12px;
-  margin-top: 4px;
- }
-
-.drop-down li:hover {
-  background: #444;
-}
+/* style of mobile icron */
+.mobile-icon:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0.2em;
+	width: 1.2em;
+	height: 0.16em;
+	background: lightgrey;
+	box-shadow: 0 0.35em 0 0 lightgrey, 0 0.7em 0 0 lightgrey;
+}     
 
 footer {
   position:absolute;
@@ -175,11 +163,17 @@ footer a {
   color: white;
   background-color: rgba(0,0,0,0.5);
   padding: 2px 5px 2px 5px;
-  border: 4px solid rgb(107, 0, 0);
+  border: 4px solid var(--accent);
   border-radius: 5px;
   opacity: 0;
   animation: 1s ease-in-out 1.2s 1 animate-header forwards;
-  font-size: 30px;
+  font-size: 25px !important;
+  text-align: center;
+}
+
+.banner-header span {
+  font: var(--heavy-font);
+  font-size: 23px;
 }
 
 .pi-logo {
@@ -199,6 +193,7 @@ footer a {
   width: 100%;
   height: 100%;
   z-index: -1;
+  display: block;
 }
 
 .stars-container span {
@@ -222,7 +217,7 @@ footer a {
 }
 
 .stars-container span:nth-child(1) {
-  top: 0;
+  top: initial;
   right: 8%;
   left: initial;
   animation-delay: initial;
@@ -237,7 +232,7 @@ footer a {
 }
 .stars-container span:nth-child(3) {
   top: 80px;
-  right: 0;
+  right: initial;
   left: initial;
   animation-delay: 0.4s;
   animation-duration: 2s;
@@ -250,9 +245,9 @@ footer a {
   animation-duration: 6s;
 }
 .stars-container span:nth-child(5) {
-  top: -500px;
-  right: -600px;
-  left: initial;
+  top: -300px ;
+  right: initial;
+  left: -20%;
   animation-delay: 0.5s;
   animation-duration: 4s;
 }
@@ -304,5 +299,63 @@ footer a {
 
   100% {
     transform: translateY(100%);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .nav-container {
+    width: 100%;
+  }
+  .banner-header {
+    margin-top: 50px;
+  }
+  .stars-container {
+    display: none;
+  }
+  body {
+    background-image: radial-gradient(circle, rgb(0, 0, 10), rgb(0, 0, 50));
+  }
+
+  .mobile-icon {
+    display: block;
+  }
+
+  .mobile-navigation ul {
+    max-height: 0px;
+    padding: 0px;
+  }
+  
+  /* mobile nav  */
+  .showing {
+    max-height: 20em !important;
+    padding-bottom: 10px !important;
+    font-size: 18px !important;
+  }
+  /* end */
+
+  .nav-bar {
+    width:100%;
+    background-color: var(--transparent-background);
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .mobile-navigation ul li {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    border: 0;
+    transition: all 0.2s;
+  }
+  
+  .mobile-navigation ul li:hover {
+    background-color: var(--secondary-accent);
+    width: 100%;
+    color: white;
+    border: 2px solid white;
+  }
+
+  .nav-bar {
+    display: block;
   }
 }

@@ -16,51 +16,53 @@
     <link href="../css/calculus.css" rel="stylesheet" type="text/css">
 
     <!-- External fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="../fonts/Akira/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="../fonts/Nexa/stylesheet.css" type="text/css" charset="utf-8" />
+    
     <!-- External Files -->
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
     <script defer src="../js/updateNav.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 </head>
 <body>
-  <div class="nav-container">
-    <nav class="navbar">
-      <ul class="nav-links">
-        <li class="nav-link">
-          <a href="../index.html">Home</a>
-        </li>
-        <li class="nav-link services">
-          <a href="#">Maths
-            <span class="material-icons dropdown-icon">
-              arrow_drop_down
-            </span>
-          </a>
-          <ul class="drop-down">
-            <li><a href="../html/formulae.html">Formulae</a></li>
-            <li><a href="../html/algebra.html">Algebra</a></li>
-            <li><a href="../html/calculus.html">Calculus</a></li>
-          </ul>
-        </li>
-        <li class="nav-link">
-          <a href="../html/login.html" id="login-text">Login</a>
-        </li>
-        <li class="nav-link">
-          <a href="../index.html">About</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+  <nav class="mobile-navigation">
+    <div class="navigation" role="navigation">
+      <div class="nav-bar">
+        <div class="mobile-icon">.</div>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="formulae.html">Formulae</a></li>
+          <li><a href="algebra.html">Algebra</a></li>
+          <li><a href="calculus.html">Calclus</a></li>
+          <li><a href="login.html" id="login-text">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <div class="vertical-banner">
-    <h3>What even is calculus?</h3>
+    <br><h3>What even is calculus?</h3><br>
     <p>We use calculus to find a rate of change in a number or the area undeneath of a curve. But to start with calculus we need to understand the most basic of graphs, such as the parabolic, regression and cubic.</p><br>
-    <p>We'll start with the easiest, the regression. This is also known as a linear line and follows the following formula: $$ y = mx + c $$ \(y\) being the y co-ordinate<br>\(m\) being the gradient or slope of the line<br>\(x\) being the x co-ordinate<br>\(c\) being the y-intercept of the line</p><br><br>
+    <p>We'll start with the easiest, the regression. This is also known as a linear line and follows the following formula: <span>$$ y = mx + c $$</span> \(y\) being the y co-ordinate<br>\(m\) being the gradient or slope of the line<br>\(x\) being the x co-ordinate<br>\(c\) being the y-intercept of the line</p><br><br>
     <p>The form of this line is a straight line that is either positive (increasing) or negative (decreasing), and the slope of a line is controled with the gradient or \(m\)</p>
     <p>Now there is the parabolic curve, which is indicated when the equation contains a variable to the power of 2 (for e.g. \(x^2\)). A parabolic equation looks like this: $$ y = x^2 $$</p><br>
     <p>But because this is a curve, the slope of the curve changes and isn't a constant like a straight regression line. So to find the gradient equation we have to find what is called a 'derivative'</p><br>
-    <h3>Derivatives</h3>
-    <p>To find a derivative we use this simple formula: $$ \frac{dy}{dx} x^n = nx^{n-1} $$ This equation is saying "The derivative of \(x^2\) is \(nx\) to the power of \(n-1\)" (n being the power that is applied to the x, which in the case of a parabola is 2)</p><br>
-    <p>With this, now we can find the gradient equation of a parabola like so: $$ \frac{dy}{dx} x^2 = 2x^{2-1} = 2x $$ Now we know that the gradient for a parabola at the point \(y\) is \(2x\) <p>
+    <br><h3>Derivatives</h3><br>
+    <p>To find a derivative we use this simple formula: <span>$$ \frac{dy}{dx} x^n = nx^{n-1} $$</span> This equation is saying "The derivative of \(x^2\) is \(nx\) to the power of \(n-1\)" (n being the power that is applied to the x, which in the case of a parabola is 2)</p><br>
+    <p>With this, now we can find the gradient equation of a parabola like so: <span>$$ \frac{dy}{dx} x^2 = 2x^{2-1} = 2x $$</span> Now we know that the gradient for a parabola at the point \(y\) is \(2x\) <p>
+  </div>
+
+  <script>
+    $.stellar()
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('.mobile-icon').click( function() {
+        $('nav ul').toggleClass("showing");
+      });
+    });
+  </script>
   </body>
 </html>

@@ -13,47 +13,49 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- External Stylesheets -->
-    <link href="../css/login.css" rel="stylesheet" type="text/css">
+    <link href="../css/logout.css" rel="stylesheet" type="text/css">
 
     <!-- External fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../fonts/Akira/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="../fonts/Nexa/stylesheet.css" type="text/css" charset="utf-8" />
 
     <script defer src="../js/logout.js"></script>
     <script defer src="../js/updateNav.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 </head>
 <body>
-  <div class="nav-container">
-    <nav class="navbar">
-      <ul class="nav-links">
-        <li class="nav-link">
-          <a href="../index.html">Home</a>
-        </li>
-        <li class="nav-link services">
-          <a href="#">Maths
-            <span class="material-icons dropdown-icon">
-              arrow_drop_down
-            </span>
-          </a>
-          <ul class="drop-down">
-            <li><a href="../html/formulae.html">Formulae</a></li>
-            <li><a href="../html/algebra.html">Algebra</a></li>
-            <li><a href="../html/calculus.html">Calculus</a></li>
-          </ul>
-        </li>
-        <li class="nav-link">
-          <a href="../html/login.html" id="login-text">Login</a>
-        </li>
-        <li class="nav-link">
-          <a href="../index.html">About</a>
-        </li>
-      </ul>
-    </nav>
+  <nav class="mobile-navigation">
+    <div class="navigation" role="navigation">
+      <div class="nav-bar">
+        <div class="mobile-icon">.</div>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="formulae.html">Formulae</a></li>
+          <li><a href="algebra.html">Algebra</a></li>
+          <li><a href="calculus.html">Calclus</a></li>
+          <li><a href="login.html" id="login-text">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="vertical-banner">
+    <form id="logout-form"> 
+      <button id="form-submit">LOGOUT</button>
+    </form>
   </div>
 
-    <div class="vertical-banner">
-        <form id="logout-form"> 
-          <button id="logout-button">LOGOUT</button>
-        </form>
-    </div>
+  <script>
+    $.stellar()
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('.mobile-icon').click( function() {
+        $('nav ul').toggleClass("showing");
+      });
+    });
+  </script>
 </body>
 </html>

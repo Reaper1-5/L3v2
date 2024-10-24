@@ -2,7 +2,7 @@
 // Levi M
 // 17.09.24
 
-const logoutButton = document.querySelectorAll("#logout-button")[0];
+const logoutButton = document.querySelectorAll("#form-submit")[0];
 
 logoutButton.addEventListener("click", (e) => {
     e.preventDefault();
