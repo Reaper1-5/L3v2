@@ -21,11 +21,20 @@
     <link rel="stylesheet" href="../fonts/Akira/stylesheet.css" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="../fonts/Nexa/stylesheet.css" type="text/css" charset="utf-8" />
 
+    <!-- Scripts -->
     <script defer src="../js/login.js"></script>
     <script defer src="../js/updateNav.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script defer>
+      $(document).ready(function(){
+        $('.mobile-icon').click( function() {
+          $('nav ul').toggleClass("showing");
+        });
+      });
+    </script>
 </head>
 <body>
+  <!-- Navigation -->
   <nav class="mobile-navigation">
     <div class="navigation" role="navigation">
       <div class="nav-bar">
@@ -41,7 +50,9 @@
     </div>
   </nav>
 
+  <!-- Page Content Container -->
   <div class="vertical-banner">
+    <!-- Login form -->
     <form id="login-form">
       <label for="username">
         USERNAME
@@ -56,16 +67,5 @@
       <button id="form-submit">LOGIN</button>
     </form>
   </div>
-
-  <script>
-    $.stellar()
-  </script>
-  <script>
-    $(document).ready(function(){
-      $('.mobile-icon').click( function() {
-        $('nav ul').toggleClass("showing");
-      });
-    });
-  </script>
 </body>
 </html>

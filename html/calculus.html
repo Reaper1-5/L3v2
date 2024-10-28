@@ -21,12 +21,20 @@
     <link rel="stylesheet" href="../fonts/Akira/stylesheet.css" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="../fonts/Nexa/stylesheet.css" type="text/css" charset="utf-8" />
     
-    <!-- External Files -->
+    <!-- Scripts -->
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script defer src="../js/updateNav.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script defer>
+      $(document).ready(function(){
+        $('.mobile-icon').click( function() {
+          $('nav ul').toggleClass("showing");
+        });
+      });
+    </script>
 </head>
 <body>
+  <!-- Navigation -->
   <nav class="mobile-navigation">
     <div class="navigation" role="navigation">
       <div class="nav-bar">
@@ -42,6 +50,7 @@
     </div>
   </nav>
 
+  <!-- Main page content -->
   <div class="vertical-banner">
     <br><h3>What even is calculus?</h3><br>
     <p>We use calculus to find a rate of change in a number or the area undeneath of a curve. But to start with calculus we need to understand the most basic of graphs, such as the parabolic, regression and cubic.</p><br>
@@ -53,16 +62,5 @@
     <p>To find a derivative we use this simple formula: <span>$$ \frac{dy}{dx} x^n = nx^{n-1} $$</span> This equation is saying "The derivative of \(x^2\) is \(nx\) to the power of \(n-1\)" (n being the power that is applied to the x, which in the case of a parabola is 2)</p><br>
     <p>With this, now we can find the gradient equation of a parabola like so: <span>$$ \frac{dy}{dx} x^2 = 2x^{2-1} = 2x $$</span> Now we know that the gradient for a parabola at the point \(y\) is \(2x\) <p>
   </div>
-
-  <script>
-    $.stellar()
-  </script>
-  <script>
-    $(document).ready(function(){
-      $('.mobile-icon').click( function() {
-        $('nav ul').toggleClass("showing");
-      });
-    });
-  </script>
-  </body>
+</body>
 </html>

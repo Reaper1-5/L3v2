@@ -21,12 +21,20 @@
     <link rel="stylesheet" href="../fonts/Akira/stylesheet.css" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="../fonts/Nexa/stylesheet.css" type="text/css" charset="utf-8" />
 
-    <!-- External Files -->
+    <!-- Scripts -->
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script defer src="../js/updateNav.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script defer>
+      $(document).ready(function(){
+        $('.mobile-icon').click( function() {
+          $('nav ul').toggleClass("showing");
+        });
+      });
+    </script>
 </head>
 <body>
+  <!-- Navigation -->
   <nav class="mobile-navigation">
     <div class="navigation" role="navigation">
       <div class="nav-bar">
@@ -42,6 +50,7 @@
     </div>
   </nav>
 
+  <!-- Main page content -->
   <div class="vertical-banner">
     <h2>Basic Arithmetic</h2>
     <p>Addition with letters : \(2a + 6a = 8a\)</p><br>
@@ -54,16 +63,5 @@
     <p>When there is a power inside and outside of the brackets, we multiply the powers : \( (a^5)^3 = a^{3\times5} = a^{15}\)</p><br>
     <p>When there is a power outside of the brackets, we distribute the power to all numbers/variables : \( (ab)^8 = a^{8}b^{8} \)</p><br>
   </div>
-
-  <script>
-    $.stellar()
-  </script>
-  <script>
-    $(document).ready(function(){
-      $('.mobile-icon').click( function() {
-        $('nav ul').toggleClass("showing");
-      });
-    });
-  </script>
 </body>
 </html>
