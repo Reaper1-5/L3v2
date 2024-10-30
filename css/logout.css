@@ -186,7 +186,7 @@ body {
   background-color: var(--secondary-accent);
 }
 
-@media only screen and (max-width: 750px) {
+@media screen and (max-width: 1130px) {
   .vertical-banner {
     top: 50%;
     left: 50%;
@@ -200,9 +200,7 @@ body {
   .nav-container {
     z-index: 10;
   }
-}
-
-@media screen and (max-width: 750px) {
+  
   .mobile-icon {
     display: block;
   }

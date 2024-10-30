@@ -302,7 +302,7 @@ footer a {
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1130px) {
   .nav-container {
     width: 100%;
   }
