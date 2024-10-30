@@ -129,21 +129,6 @@ body > div {
 	height: 0.16em;
 	background: lightgrey;
 	box-shadow: 0 0.35em 0 0 lightgrey, 0 0.7em 0 0 lightgrey;
-}     
-
-footer {
-  position:absolute;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  height: 12px;
-  margin-left: 12px;
-  transform: translateY(-12px);
-}
-
-footer a {
-  font-size: 8px !important;
-  color: white;
 }
 
 .banner {
@@ -289,16 +274,6 @@ footer a {
 
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes animate-dropdown {
-  0% {
-    transform: translateY(0%);
-  }
-
-  100% {
-    transform: translateY(100%);
   }
 }
 

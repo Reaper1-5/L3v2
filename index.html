@@ -23,6 +23,14 @@
     <script defer src="../js/updateNav.js"></script>
     <script src="jquery-3.7.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('.mobile-icon').click( function() {
+          $('nav ul').toggleClass("showing");
+        });
+      });
+    </script>
   </head>
   <body>
     <div>
@@ -34,7 +42,7 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="html/formulae.html">Formulae</a></li>
               <li><a href="html/algebra.html">Algebra</a></li>
-              <li><a href="html/calculus.html">Calclus</a></li>
+              <li><a href="html/calculus.html">Calculus</a></li>
               <li><a href="html/login.html" id="login-text">Login</a></li>
             </ul>
           </div>
@@ -46,10 +54,7 @@
         <h3 class="banner-header">Welcome to the <br><span>World of Mathematics</span></h3>
       </div>
     </div>
-
-    <footer>
-      <a href="https://www.flaticon.com/free-icons/menu" title="menu icons">Menu icons created by Freepik - Flaticon</a>
-    </footer>
+    
     <div class="stars-container">
       <span></span>
       <span></span>
@@ -57,15 +62,5 @@
       <span></span>
       <span></span>
     </div>
-    <script>
-      $.stellar()
-    </script>
-    <script>
-      $(document).ready(function(){
-        $('.mobile-icon').click( function() {
-          $('nav ul').toggleClass("showing");
-        });
-      });
-    </script>
   </body>
 </html>

@@ -24,14 +24,7 @@
     <!-- Scripts -->
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script defer src="../js/updateNav.js"></script>
-    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <script>
-      $(document).ready(function(){
-        $('.mobile-icon').click( function() {
-          $('nav ul').toggleClass("showing");
-        });
-      });
-    </script>
+    <script src="../jquery-3.7.1.min.js"></script>
 </head>
 <body>
   <!-- Navigation -->
@@ -43,7 +36,7 @@
           <li><a href="../index.html">Home</a></li>
           <li><a href="formulae.html">Formulae</a></li>
           <li><a href="algebra.html">Algebra</a></li>
-          <li><a href="calculus.html">Calclus</a></li>
+          <li><a href="calculus.html">Calculus</a></li>
           <li><a href="login.html" id="login-text">Login</a></li>
         </ul>
       </div>
@@ -53,15 +46,22 @@
   <!-- Main page content -->
   <div class="vertical-banner">
     <h2>Basic Arithmetic</h2>
-    <p>Addition with letters : \(2a + 6a = 8a\)</p><br>
-    <p>Subtraction with letters : \(7a - 2a = 5a\)</p><br>
-    <p>Multiplication with letters : \(a\times b = ab \)</p><br>
-    <p>When dividing : Put the first letter(s) on the left side of the division symbols, over the letter(s) that appear on the right side of the divide symbol</p><br>
+    <p>Addition with letters : <span>\(2a + 6a = 8a\)</span></p><br>
+    <p>Subtraction with letters : <span>\(7a - 2a = 5a\)</span></p><br>
+    <p>Multiplication with letters : <span>\(a\times b = ab \)</span></p><br>
+    <p>Dividing with letters : \(a \div b = \frac{a}{b} \)</p><br>
     <h2>Powers</h2><br>
-    <p>When multiplying, if the bases are the same we add the powers : \( a^5\times a^2 = a^{5+2} = a^7 \)</p><br>
-    <p>When dividing, if the bases are the same we subtract the powers : \( \frac{a^5}{a^2} = a^{5-2} = a^3 \)</p><br>
-    <p>When there is a power inside and outside of the brackets, we multiply the powers : \( (a^5)^3 = a^{3\times5} = a^{15}\)</p><br>
-    <p>When there is a power outside of the brackets, we distribute the power to all numbers/variables : \( (ab)^8 = a^{8}b^{8} \)</p><br>
+    <p>When multiplying, if the bases are the same we add the powers : <span>\( a^5\times a^2 = a^{5+2} = a^7 \)</span></p><br>
+    <p>When dividing, if the bases are the same we subtract the powers : <span>\( \frac{a^5}{a^2} = a^{5-2} = a^3 \)</span></p><br>
+    <p>When there is a power inside and outside of the brackets, we multiply the powers : <span>\( (a^5)^3 = a^{3\times5} = a^{15}\)</span></p><br>
+    <p>When there is a power outside of the brackets, we distribute the power to all numbers/variables : <span>\( (ab)^8 = a^{8}b^{8} \)</span></p><br>
   </div>
+  <script defer>
+    $(document).ready(function(){
+      $('.mobile-icon').click( function() {
+        $('nav ul').toggleClass("showing");
+      });
+    });
+  </script>
 </body>
 </html>

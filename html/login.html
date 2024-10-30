@@ -25,14 +25,8 @@
     <script defer src="../js/login.js"></script>
     <script defer src="../js/updateNav.js"></script>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <script src="jquery-3.7.1.min.js"></script>
-    <script defer>
-      $(document).ready(function(){
-        $('.mobile-icon').click( function() {
-          $('nav ul').toggleClass("showing");
-        });
-      });
-    </script>
+    <script src="../jquery-3.7.1.min.js"></script>
+    
 </head>
 <body>
   <!-- Navigation -->
@@ -44,7 +38,7 @@
           <li><a href="../index.html">Home</a></li>
           <li><a href="formulae.html">Formulae</a></li>
           <li><a href="algebra.html">Algebra</a></li>
-          <li><a href="calculus.html">Calclus</a></li>
+          <li><a href="calculus.html">Calculus</a></li>
           <li><a href="login.html" id="login-text">Login</a></li>
         </ul>
       </div>
@@ -68,5 +62,14 @@
       <button id="form-submit">LOGIN</button>
     </form>
   </div>
+
+  <!-- Mobile navigation script -->
+  <script defer>
+    $(document).ready(function(){
+      $('.mobile-icon').click( function() {
+        $('nav ul').toggleClass("showing");
+      });
+    });
+  </script>
 </body>
 </html>

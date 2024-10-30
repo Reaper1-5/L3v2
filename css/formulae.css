@@ -144,9 +144,10 @@ body {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   border: 4px solid var(--accent);
   border-radius: 5px;
-  background-color: black;
+  background-color: rgba(0,0,0,0.8);
   color: #fff;
   padding: 12px 12px 12px 12px;
+  margin: 30px 0 0 0;
 }
 
 .vertical-banner h1 {
@@ -160,12 +161,17 @@ body {
 }
 
 @media screen and (max-width: 1130px) {
+  body {
+    background-color: black;
+    background-image: none;
+  }
+
   .vertical-banner {
     border: 0;
     width: 100%;
-    height: 100%;
+    max-height: 100vh;
     z-index: 0;
-    padding: 200px 0 0 12px !important;
+    padding: 100px 0 0 12px !important;
   }
   .nav-container {
     z-index: 10;

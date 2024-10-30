@@ -24,14 +24,8 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script defer src="../js/updateNav.js"></script>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
-    <script defer>
-      $(document).ready(function(){
-        $('.mobile-icon').click( function() {
-          $('nav ul').toggleClass("showing");
-        });
-      });
-    </script>
+    <script src="../jquery-3.7.1.min.js"></script>
+    
 </head>
 <body>
   <!-- Navigation -->
@@ -43,7 +37,7 @@
           <li><a href="../index.html">Home</a></li>
           <li><a href="formulae.html">Formulae</a></li>
           <li><a href="algebra.html">Algebra</a></li>
-          <li><a href="calculus.html">Calclus</a></li>
+          <li><a href="calculus.html">Calculus</a></li>
           <li><a href="login.html" id="login-text">Login</a></li>
         </ul>
       </div>
@@ -57,5 +51,13 @@
     <p>Now I am going to integrate letters into the mix. Instead of using numbers in an equation, we can use something called a 'variable'. In the above example we use 'apples and bananas' to replace numbers, the apple is a variable because it held a value of $10! Let us start simple. We will say there are 20 students going on a trip to the fossil museum, and each student needs to pay 'x' amount of dollars. If the combined payments equal $100, then what is 'x'? Now, I know there are a lot of words in this equation but really you only need to highlight the key numbers and instructions. In this question we need to find what each student paid individually, if we think in equation terms we can find this equation: <span>$$ 20 x = 100 $$</span></p>
     <p>We can then rearrange the equation to make \(x\) the subject: <span>$$ x = \frac{100}{20} = $5 $$</span> We found that each student needs to pay $5 to go to the museum!</p>
   </div>
+  <!-- Mobile navigation script -->
+  <script defer>
+    $(document).ready(function(){
+      $('.mobile-icon').click( function() {
+        $('nav ul').toggleClass("showing");
+      });
+    });
+  </script>
 </body>
 </html>
